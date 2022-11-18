@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   title: {
     display: "flex",
     justifyContent: "start",
+    textAlign: "center",
     marginTop: "5px",
     marginBottom: '20px',
     height: '1rem'
@@ -96,14 +97,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '1px',
     padding: '5px'
   },
-  width1: {
-    width: "20px"
-  },
-  width2: {
-    width: "60px"
-  },
-
-
+  pointLine: {
+    borderStyle: "none dotted dotted none"
+  }
 }));
 
 export default useStyles;

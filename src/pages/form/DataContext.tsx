@@ -1,11 +1,15 @@
-import { useState } from "react";
-import { injectStyle } from "react-toastify/dist/inject-style";
+import React, { createContext, useState, ChangeEvent } from 'react';
+import { injectStyle } from 'react-toastify/dist/inject-style';
 import { toast } from "react-toastify";
 
+// import { useFormControls, initialFormValues } from './FormControls.tsx';
+
+export const DataContext = createContext({});
+
 const PostContactForm = async (
-  values: any,
-  successCallback: any,
-  errorCallback: any
+  values,
+  successCallback,
+  errorCallback
 ) => {
   // do stuff
   // if successful
@@ -13,7 +17,7 @@ const PostContactForm = async (
   else errorCallback();
 };
 
-const initialFormValues = {
+export const initialFormValues = {
   rx: "",
   fecha: "",
   cliente: "",
@@ -48,9 +52,10 @@ if (typeof window !== "undefined") {
   injectStyle();
 };
 
-export const useFormControls = () => {
+export const DataProvider = ({ children }) => {
+
   const [values, setValues] = useState(initialFormValues);
-  const [errors, setErrors] = useState({} as any);
+  const [errors, setErrors] = useState({} as any); // initialFormValues
 
   const validate: any = (fieldValues = values) => {
     const temp: any = { ...errors };
@@ -138,13 +143,14 @@ export const useFormControls = () => {
     });
   };
 
-  const handleInputValue = (e: any) => {
+  const handleInputValue = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setValues({
       ...values,
       [name]: value
     });
     validate({ [name]: value });
+    console.log(values, 'jdkasndla')
   };
 
   const handleSuccess = () => {
@@ -217,12 +223,16 @@ export const useFormControls = () => {
     }
   };
 
-  return {
-    values,
-    errors,
-    handleInputValue,
-    handleFormSubmit,
-    formIsValid,
-    successToast
-  };
-};
+  return (
+    <DataContext.Provider value={{
+      values,
+      errors,
+      handleInputValue,
+      handleFormSubmit,
+      formIsValid,
+      successToast
+    }}>
+      {children}
+    </DataContext.Provider>
+  );
+}

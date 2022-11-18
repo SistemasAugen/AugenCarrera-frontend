@@ -12,11 +12,6 @@ const navConfig = [
     icon: getIcon('eva:pie-chart-2-fill'),
   },
   {
-    title: 'Registrar',
-    path: '/register',
-    icon: getIcon('eva:person-add-fill'),
-  },
-  {
     title: 'Pagina no encontrada',
     path: '/404',
     icon: getIcon('eva:alert-triangle-fill'),

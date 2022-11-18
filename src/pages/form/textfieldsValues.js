@@ -1,101 +1,163 @@
 export default [
   {
     title: 'CAPTURA DE DATOS',
+    pdfTitle: '',
     fields: [
       {
         id: "prescription",
         name: "rx",
+        pdfName: 'rx',
         label: "RX",
-        width: '200px'
+        pdfLabel: 'RX',
+        width: '200px',
+        pdfWidth: '400px',
+        pdfHeight: '30px',
       },
       {
         id: "date",
         name: "fecha",
+        pdfName: "fecha",
         label: "FECHA",
-        width: '200px'
+        pdfLabel: "FECHA",
+        width: '200px',
+        pdfWidth: '400px',
+        pdfHeight: '30px',
       },
       {
         id: "client",
         name: "cliente",
+        pdfName: "cliente",
         label: "CLIENTE",
-        width: '380px'
+        pdfLabel: "CLIENTE",
+        width: '380px',
+        pdfWidth: '400px',
+        pdfHeight: '30px',
       },
     ]
   },
   {
     title: 'GRADUACIÓN',
+    pdfTitle: 'GRADUACIÓN',
     fields: [
       {
         id: "4",
         name: "od_esfera",
+        pdfName: "od_esfera",
         label: "OD ESFERA",
-        width: '125px'
+        pdfLabel: "OD ESFERA",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "5",
         name: "od_cilindro",
+        pdfName: "od_cilindro",
         label: "OD CILINDRO",
-        width: '125px'
+        pdfLabel: "OD CILINDRO",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "6",
         name: "od_eje",
+        pdfName: "od_eje",
         label: "OD EJE",
-        width: '125px'
+        pdfLabel: "OD EJE",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "7",
         name: "od_adicion",
+        pdfName: "od_adicion",
         label: "OD ADICIÓN",
-        width: '125px'
+        pdfLabel: "OD ADICIÓN",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "8",
         name: "od_dip",
+        pdfName: "od_dip",
         label: "OD DIP",
-        width: '125px'
+        pdfLabel: "OD DIP",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "9",
         name: "od_altura",
+        pdfName: "od_altura",
         label: "OD ALTURA",
-        width: '125px'
+        pdfLabel: "OD ALTURA",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "10",
         name: "oi_esfera",
+        pdfName: "oi_esfera",
         label: "OI ESFERA",
-        width: '125px'
+        pdfLabel: "OI ESFERA",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "11",
         name: "oi_cilindro",
+        pdfName: "oi_cilindro",
         label: "OI CILINDRO",
-        width: '125px'
+        pdfLabel: "OI CILINDRO",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "12",
         name: "oi_eje",
+        pdfName: "oi_eje",
         label: "OI EJE",
-        width: '125px'
+        pdfLabel: "OI EJE",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "13",
         name: "oi_adicion",
+        pdfName: "oi_adicion",
         label: "OI ADICIÓN",
-        width: '125px'
+        pdfLabel: "OI ADICIÓN",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "14",
         name: "oi_dip",
+        pdfName: "oi_dip",
         label: "OI DIP",
-        width: '125px'
+        pdfLabel: "OI DIP",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
       {
         id: "15",
         name: "oi_altura",
+        pdfName: "oi_altura",
         label: "OI ALTURA",
-        width: '125px'
+        pdfLabel: "OI ALTURA",
+        width: '125px',
+        pdfWidth: '125px',
+        pdfHeight: '50px',
       },
     ]
   },
@@ -104,92 +166,117 @@ export default [
       {
         id: "16",
         name: "diseno",
+        pdfName: "diseno",
         label: "DISEÑO",
-        width: "395px"
+        pdfLabel: "DISEÑO",
+        width: "395px",
+        pdfWidth: "395px",
+        pdfHeight: '50px',
       },
       {
         id: "17",
         name: "material",
+        pdfName: "material",
         label: "MATERIAL",
-        width: "395px"
+        pdfLabel: "MATERIAL",
+        width: "395px",
+        pdfWidth: "395px",
+        pdfHeight: '50px',
       },
       {
         id: "18",
         name: "tipo_ar",
+        pdfName: "tipo_ar",
         label: "TIPO AR",
-        width: "395px"
+        pdfLabel: "TIPO AR",
+        width: "395px",
+        pdfWidth: "395px",
+        pdfHeight: '50px',
       },
       {
         id: "19",
         name: "tallado",
+        pdfName: "tallado",
         label: "TALLADO",
-        width: "395px"
+        pdfLabel: "TALLADO",
+        width: "395px",
+        pdfWidth: "395px",
+        pdfHeight: '50px',
       },
     ]
   },
   {
     title: 'SERVICIOS',
+    pdfTitle: 'SERVICIOS',
     fields: [
       {
         id: "27",
         name: "servicios",
         label: "SERVICIOS",
-        width: "800px"
+        width: "800px",
+        pdfWidth: '800px',
+        pdfHeight: '50px',
       }
     ]
   },
   {
     title: 'ARMAZON',
+    pdfTitle: 'ARMAZÓN',
     fields: [
       {
         id: "21",
         name: "tipo_de_armazon",
         label: "TIPO DE ARMAZÓN",
-        width: "157px"
+        width: "157px",
+        pdfWidth: '150px',
+        pdfHeight: '50px',
       },
       {
         id: "22",
         name: "horizontal_a",
         label: "HORIZONTAL 'A'",
-        width: "150px"
+        width: "150px",
+        pdfWidth: '150px',
+        pdfHeight: '50px',
       },
       {
         id: "23",
         name: "vertical_b",
         label: "VERTICAL 'B'",
-        width: "150px"
+        width: "150px",
+        pdfWidth: '150px',
+        pdfHeight: '50px',
       },
       {
         id: "24",
         name: "diagonal_ed",
         label: "DIAGONAL 'ED'",
-        width: "150px"
+        width: "150px",
+        pdfWidth: '150px',
+        pdfHeight: '50px',
       },
       {
         id: "25",
         name: "puente",
         label: "PUENTE",
-        width: "157px"
+        width: "157px",
+        pdfWidth: '150px',
+        pdfHeight: '50px',
       },
     ]
   },
   {
     title: 'OBSERVACIONES',
+    pdfTitle: 'OBSERVACIONES',
     fields: [
       {
         id: "21",
         name: "observaciones",
         label: "OBSERVACIONES",
-        width: "800px"
+        width: "800px",
+        pdfWidth: '800px',
+        pdfHeight: '50px',
       },
     ]
   },
 ]
-
-
-
-
-
-
-
-

@@ -4,6 +4,7 @@ import { Grid, Container, Typography } from '@mui/material';
 // components
 import Page from '../components/Page';
 import Form from './form/Form';
+import { DataProvider } from './form/DataContext.tsx';
 
 export default function DashboardApp() {
   const theme = useTheme();
@@ -16,7 +17,9 @@ export default function DashboardApp() {
             Bienvenido
           </Typography>
         </Container>
-        <Form />
+        <DataProvider>
+          <Form />
+        </DataProvider>
       </Page>
     </>
   );
