@@ -1,6 +1,8 @@
 // component
 import Iconify from '../../components/Iconify';
 
+// Available Icons List 
+// https://icon-sets.iconify.design/eva/
 // ----------------------------------------------------------------------
 
 const getIcon = (name) => <Iconify icon={name} width={22} height={22} />;
@@ -14,7 +16,7 @@ const navConfig = [
   {
     title: 'Lista de RXs',
     path: '/dashboard/rxlist',
-    icon: getIcon('eva:format-list-bulleted-rounded'),
+    icon: getIcon('eva:list-fill'),
   },
   {
     title: 'Pagina no encontrada',
