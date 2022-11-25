@@ -102,8 +102,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   width2: {
     width: "60px"
   },
-
-
 }));
 
 export default useStyles;

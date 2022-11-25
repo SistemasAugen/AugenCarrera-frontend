@@ -1,10 +1,12 @@
+import { number } from "prop-types";
+
 export default [
   {
     title: 'CAPTURA DE DATOS',
     pdfTitle: '',
     fields: [
       {
-        id: "prescription",
+        id: "1",
         name: "rx",
         pdfName: 'rx',
         label: "RX",
@@ -14,7 +16,7 @@ export default [
         pdfHeight: '30px',
       },
       {
-        id: "date",
+        id: "2",
         name: "fecha",
         pdfName: "fecha",
         label: "FECHA",
@@ -22,9 +24,10 @@ export default [
         width: '200px',
         pdfWidth: '400px',
         pdfHeight: '30px',
+        type: "date"
       },
       {
-        id: "client",
+        id: "3",
         name: "cliente",
         pdfName: "cliente",
         label: "CLIENTE",
@@ -48,6 +51,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "5",
@@ -58,6 +62,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "6",
@@ -68,6 +73,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "7",
@@ -78,6 +84,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "8",
@@ -88,6 +95,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "9",
@@ -98,6 +106,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "10",
@@ -108,6 +117,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "11",
@@ -118,6 +128,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "12",
@@ -128,6 +139,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "13",
@@ -138,6 +150,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "14",
@@ -148,6 +161,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
       {
         id: "15",
@@ -158,6 +172,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
+        type: "number",
       },
     ]
   },

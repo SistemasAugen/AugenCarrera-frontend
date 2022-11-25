@@ -143,12 +143,13 @@ const Form = () => {
                       <Typography className={classes.title} variant="subtitle1">
                         {field.label}
                       </Typography>
-                      <TextField
+                      <TextField 
                         required
                         onChange={handleInputValue}
                         onBlur={handleInputValue}
                         name={field.name}
-                        style={{ width: field.width }}
+                        type={field.type || "text"}
+                        style={{ width: field.width, minHeight: "77px" }}
                         error={!!errors[field.name]}
                         autoComplete="none"
                         {... (errors[field.name] && {

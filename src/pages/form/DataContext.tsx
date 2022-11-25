@@ -70,40 +70,40 @@ export const DataProvider = ({ children }) => {
       temp.cliente = fieldValues.cliente ? "" : "Ingresa un cliente.";
 
     if ("od_esfera" in fieldValues)
-      temp.od_esfera = fieldValues.od_esfera ? "" : "Ingresa od_esfera.";
+      temp.od_esfera = fieldValues.od_esfera ? "" : "Requerido";
 
     if ("od_cilindro" in fieldValues)
-      temp.od_cilindro = fieldValues.od_cilindro ? "" : "Ingresa od_cilindro.";
+      temp.od_cilindro = fieldValues.od_cilindro ? "" : "Requerido";
 
     if ("od_eje" in fieldValues)
-      temp.od_eje = fieldValues.od_eje ? "" : "Ingresa od_eje.";
+      temp.od_eje = fieldValues.od_eje ? "" : "Requerido";
 
     if ("od_adicion" in fieldValues)
-      temp.od_adicion = fieldValues.od_adicion ? "" : "Ingresa od_adicion.";
+      temp.od_adicion = fieldValues.od_adicion ? "" : "Requerido";
 
     if ("od_dip" in fieldValues)
-      temp.od_dip = fieldValues.od_dip ? "" : "Ingresa od_dip.";
+      temp.od_dip = fieldValues.od_dip ? "" : "Requerido";
 
     if ("od_altura" in fieldValues)
-      temp.od_altura = fieldValues.od_altura ? "" : "Ingresa od_alturaaaa.";
+      temp.od_altura = fieldValues.od_altura ? "" : "Requerido";
 
     if ("oi_esfera" in fieldValues)
-      temp.oi_esfera = fieldValues.oi_esfera ? "" : "Ingresa oi_esfera.";
+      temp.oi_esfera = fieldValues.oi_esfera ? "" : "Requerido";
 
     if ("oi_cilindro" in fieldValues)
-      temp.oi_cilindro = fieldValues.oi_cilindro ? "" : "Ingresa oi_cilindro.";
+      temp.oi_cilindro = fieldValues.oi_cilindro ? "" : "Requerido";
 
     if ("oi_eje" in fieldValues)
-      temp.oi_eje = fieldValues.oi_eje ? "" : "Ingresa oi_eje.";
+      temp.oi_eje = fieldValues.oi_eje ? "" : "Requerido";
 
     if ("oi_adicion" in fieldValues)
-      temp.oi_adicion = fieldValues.oi_adicion ? "" : "Ingresa oi_adicion.";
+      temp.oi_adicion = fieldValues.oi_adicion ? "" : "Requerido";
 
     if ("oi_dip" in fieldValues)
-      temp.oi_dip = fieldValues.oi_dip ? "" : "Ingresa oi_dip.";
+      temp.oi_dip = fieldValues.oi_dip ? "" : "Requerido";
 
     if ("oi_altura" in fieldValues)
-      temp.oi_altura = fieldValues.oi_altura ? "" : "Ingresa oi_altura.";
+      temp.oi_altura = fieldValues.oi_altura ? "" : "Requerido";
 
     if ("diseno" in fieldValues)
       temp.diseno = fieldValues.diseno ? "" : "Ingresa diseño.";
