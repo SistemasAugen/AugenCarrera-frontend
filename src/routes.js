@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import NotFound from './pages/Page404';
 import Register from './pages/Register';
 import DashboardApp from './pages/DashboardApp';
+import { RxListPage } from './pages/RxList/RxListPage';
 
 export default function Router() {
   return useRoutes([
@@ -20,6 +21,7 @@ export default function Router() {
       element: <DashboardLayout />,
       children: [
         { path: 'app', element: <DashboardApp /> },
+        { path: 'rxlist', element: <RxListPage /> },
       ],
     },
     {
@@ -29,6 +31,7 @@ export default function Router() {
         { path: '/', element: <Navigate to="/auth/login" /> },
         { path: 'dashboard', element: <DashboardApp /> },
         { path: 'register', element: <Register /> },
+        { path: 'rx', element: <RxListPage /> },
         { path: '404', element: <NotFound /> },
         { path: '*', element: <Navigate to="/404" /> },
       ],
