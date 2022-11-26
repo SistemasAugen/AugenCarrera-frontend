@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 // import { useFormControls, initialFormValues } from './FormControls.tsx';
 
 export const DataContext = createContext({});
-
 const PostContactForm = async (
   values,
   successCallback,
@@ -143,14 +142,13 @@ export const DataProvider = ({ children }) => {
     });
   };
 
-  const handleInputValue = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+  const handleInputValue = (e: ChangeEvent<HTMLInputElement>, inputData: {name: string; value: string;}) => {
+    const { name, value } = inputData || e.target;
     setValues({
       ...values,
       [name]: value
     });
     validate({ [name]: value });
-    console.log(values, 'jdkasndla')
   };
 
   const handleSuccess = () => {

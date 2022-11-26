@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-
+import Autocomplete from '@mui/material/Autocomplete';
 import html2canvas from "html2canvas";
 import pdfMake from "pdfmake/build/pdfmake";
 
@@ -10,13 +10,12 @@ import { grey } from '@mui/material/colors';
 import axios from "axios";
 
 import useStyles from './Form.styles.ts';
-import textfieldsValues from './textfieldsValues';
+import textfieldsValues, { InputTypes } from './textfieldsValues';
 import logoAugen from "../../imgs/logoAugen.png";
 import logoCarrera from "../../imgs/logoCarrera.svg.png";
 import Pdf from './pdf/Pdf';
 
 import { DataContext } from './DataContext.tsx';
-
 
 const Form = () => {
 
@@ -133,33 +132,57 @@ const Form = () => {
           </div>
           {textfieldsValues.map(sectionConfig => {
             return (
-              <div>
+              <div key={sectionConfig.title}>
                 <Grid item className={classes.containerTitle}>
                   <Typography variant="h5">{sectionConfig.title}</Typography>
                 </Grid>
                 <div className={classes.containerFields}>
-                  {sectionConfig.fields.map(field => (
-                    <div className={classes.content}>
-                      <Typography className={classes.title} variant="subtitle1">
-                        {field.label}
-                      </Typography>
-                      <TextField 
-                        required
-                        onChange={handleInputValue}
-                        onBlur={handleInputValue}
-                        name={field.name}
-                        type={field.type || "text"}
-                        style={{ width: field.width, minHeight: "77px" }}
-                        error={!!errors[field.name]}
-                        autoComplete="none"
-                        {... (errors[field.name] && {
-                          error: true,
-                          helperText: errors[field.name]
-                        })}
-                      />
-                      <br />
-                    </div>
-                  ))}
+                  {sectionConfig.fields.map(field => {
+                    if (field.type === InputTypes.AUTOCOMPLETE) {
+                      return (
+                        <div className={classes.autocompleteContent} key={field.id}>
+                          <Typography className={classes.title} variant="subtitle1">
+                            {field.label}
+                          </Typography>
+                          <Autocomplete
+                            disablePortal
+                            id="combo-box-demo"
+                            options={field.options}
+                            onChange={(e, newValue) => handleInputValue(e, { name: field.name, value: newValue})}
+                            name={field.name}
+                            sx={{ width: field.width, minHeight: "77px" }}
+                            renderInput={(params) =>
+                            <TextField
+                              {...params}
+                              label={field.label}
+                            />
+                            }
+                          />
+                        </div>
+                      )
+                    }
+                    return (
+                      <div className={classes.content} key={field.id}>
+                        <Typography className={classes.title} variant="subtitle1">
+                          {field.label}
+                        </Typography>
+                        <TextField
+                          required
+                          onChange={handleInputValue}
+                          onBlur={handleInputValue}
+                          name={field.name}
+                          type={field.type || "text"}
+                          style={{ width: field.width, minHeight: "77px" }}
+                          error={!!errors[field.name]}
+                          {... (errors[field.name] && {
+                            error: true,
+                            helperText: errors[field.name]
+                          })}
+                        />
+                        <br />
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             )

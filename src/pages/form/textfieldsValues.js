@@ -1,7 +1,15 @@
 import { number } from "prop-types";
 
+export const InputTypes = {
+  AUTOCOMPLETE: 'Autocomplete',
+  NUMBER: 'number',
+  TEXT: 'text',
+  DATE: 'date'
+}
+
 export default [
   {
+    id: "headers",
     title: 'CAPTURA DE DATOS',
     pdfTitle: '',
     fields: [
@@ -24,7 +32,7 @@ export default [
         width: '200px',
         pdfWidth: '400px',
         pdfHeight: '30px',
-        type: "date"
+        type: InputTypes.DATE
       },
       {
         id: "3",
@@ -51,7 +59,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "5",
@@ -62,7 +70,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "6",
@@ -73,7 +81,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "7",
@@ -84,7 +92,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "8",
@@ -95,7 +103,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "9",
@@ -106,7 +114,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "10",
@@ -117,7 +125,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "11",
@@ -128,7 +136,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "12",
@@ -139,7 +147,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "13",
@@ -150,7 +158,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "14",
@@ -161,7 +169,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
       {
         id: "15",
@@ -172,7 +180,7 @@ export default [
         width: '125px',
         pdfWidth: '125px',
         pdfHeight: '50px',
-        type: "number",
+        type: InputTypes.NUMBER,
       },
     ]
   },
@@ -187,6 +195,14 @@ export default [
         width: "395px",
         pdfWidth: "395px",
         pdfHeight: '50px',
+        type: InputTypes.AUTOCOMPLETE,
+        options: [
+          "diseno 1",
+          "diseno 2",
+          "diseno 3",
+          "diseno 4",
+          "diseno 5",
+        ]
       },
       {
         id: "17",
@@ -197,6 +213,14 @@ export default [
         width: "395px",
         pdfWidth: "395px",
         pdfHeight: '50px',
+        type: InputTypes.AUTOCOMPLETE,
+        options: [
+          "material 1",
+          "material 2",
+          "material 3",
+          "material 4",
+          "material 5",
+        ]
       },
       {
         id: "18",
@@ -207,6 +231,14 @@ export default [
         width: "395px",
         pdfWidth: "395px",
         pdfHeight: '50px',
+        type: InputTypes.AUTOCOMPLETE,
+        options: [
+          "tipo_ar 1",
+          "tipo_ar 2",
+          "tipo_ar 3",
+          "tipo_ar 4",
+          "tipo_ar 5",
+        ]
       },
       {
         id: "19",
@@ -217,6 +249,14 @@ export default [
         width: "395px",
         pdfWidth: "395px",
         pdfHeight: '50px',
+        type: InputTypes.AUTOCOMPLETE,
+        options: [
+          "tallado 1",
+          "tallado 2",
+          "tallado 3",
+          "tallado 4",
+          "tallado 5",
+        ]
       },
     ]
   },
@@ -231,6 +271,7 @@ export default [
         width: "800px",
         pdfWidth: '800px',
         pdfHeight: '50px',
+        pdfClass: "noBorderLines"
       }
     ]
   },
@@ -245,6 +286,14 @@ export default [
         width: "157px",
         pdfWidth: '150px',
         pdfHeight: '50px',
+        type: InputTypes.AUTOCOMPLETE,
+        options: [
+          "tipo_de_armazon 1",
+          "tipo_de_armazon 2",
+          "tipo_de_armazon 3",
+          "tipo_de_armazon 4",
+          "tipo_de_armazon 5",
+        ]
       },
       {
         id: "22",
@@ -291,6 +340,7 @@ export default [
         width: "800px",
         pdfWidth: '800px',
         pdfHeight: '50px',
+        pdfClass: "noBorderLines"
       },
     ]
   },
