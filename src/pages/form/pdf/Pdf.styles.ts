@@ -99,6 +99,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   pointLine: {
     borderStyle: "none dotted dotted none"
+  },
+  noRightLine: {
+    borderRightStyle: "none",
+  },
+  noBorderLines: {
+    borderStyle: "none"
   }
 }));
 

@@ -39,8 +39,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     flexWrap: "wrap",
     marginRight: '10px',
-    height: "auto", /* pendiente */
+    height: "auto", 
     justifyContent: "center",
+    flexDirection: "column"
+  },
+  autocompleteContent: {
+    display: "flex",
+    flexWrap: "wrap",
+    marginRight: '10px',
+    height: "auto", 
+    justifyContent: "none",
     flexDirection: "column"
   },
   title: {
