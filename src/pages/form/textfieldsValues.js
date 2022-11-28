@@ -187,6 +187,7 @@ export default [
         width: "395px",
         pdfWidth: "395px",
         pdfHeight: '50px',
+        type: "autocomplete"
       },
       {
         id: "17",
