@@ -197,11 +197,17 @@ export default [
         pdfHeight: '50px',
         type: InputTypes.AUTOCOMPLETE,
         options: [
-          "diseno 1",
-          "diseno 2",
-          "diseno 3",
-          "diseno 4",
-          "diseno 5",
+          "Monofocal",
+          "Monofocal Asferico (Monofocal HD)",
+          "Flat-Top",
+          "Invisible",
+          "Progresivo Trinity 11-15",
+          "Progresivo Trinity 13-17 Freshman",
+          "Progresivo Trinity 13-17 Hypersoft",
+          "Progresivo Trinity 13-17 Profesional",
+          "Progresivo 15-20 Urban",
+          "Progresivo Trinity 8-12 Mini",
+          "Progresivo Trinity Spacia",
         ]
       },
       {
@@ -215,11 +221,14 @@ export default [
         pdfHeight: '50px',
         type: InputTypes.AUTOCOMPLETE,
         options: [
-          "material 1",
-          "material 2",
-          "material 3",
-          "material 4",
-          "material 5",
+          "CR-39",
+          "Alto Indice",
+          "Parasol",
+          "Trivex",
+          "Trivex 1.60",
+          "Trivex Parasol",
+          "Polarizado",
+          "B BLOCK",
         ]
       },
       {
@@ -233,11 +242,10 @@ export default [
         pdfHeight: '50px',
         type: InputTypes.AUTOCOMPLETE,
         options: [
-          "tipo_ar 1",
-          "tipo_ar 2",
-          "tipo_ar 3",
-          "tipo_ar 4",
-          "tipo_ar 5",
+          "Ninguno",
+          "Matiz-e",
+          "Gold",
+          "Azul",
         ]
       },
       {
@@ -251,11 +259,11 @@ export default [
         pdfHeight: '50px',
         type: InputTypes.AUTOCOMPLETE,
         options: [
-          "tallado 1",
-          "tallado 2",
-          "tallado 3",
-          "tallado 4",
-          "tallado 5",
+          "Digital",
+          "Free Form",
+          "Free Form HD",
+          "HD",
+          "Terminado",
         ]
       },
     ]
@@ -288,11 +296,10 @@ export default [
         pdfHeight: '50px',
         type: InputTypes.AUTOCOMPLETE,
         options: [
-          "tipo_de_armazon 1",
-          "tipo_de_armazon 2",
-          "tipo_de_armazon 3",
-          "tipo_de_armazon 4",
-          "tipo_de_armazon 5",
+          "Metálico",
+          "Perforado",
+          "Plástico",
+          "Ranurado",
         ]
       },
       {

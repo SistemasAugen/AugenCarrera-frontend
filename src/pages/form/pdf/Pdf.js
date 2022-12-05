@@ -96,7 +96,7 @@ const Pdf = () => {
   // }
 
   function shoulShowBorderLine(sectionConfigLength, index) {
-    return sectionConfigLength-1 === index || ((sectionConfigLength/2)-1) === index
+    return sectionConfigLength - 1 === index || ((sectionConfigLength / 2) - 1) === index
   }
 
   return (
@@ -144,22 +144,21 @@ const Pdf = () => {
           <Divider color="red" />
         </div>
         {textfieldsValues.map(sectionConfig => {
-          if(sectionConfig.id === "headers"){
+          if (sectionConfig.id === "headers") {
             return (
               sectionConfig.fields.map(field => (
-                <div style={{ display: "flex", textAlign: "center"}}>
-                <Typography className={classes.containerTitle} style={{ fontSize: "24px"}} variant="h5">
-                  { field.label }:
-                </Typography>
-                <Typography className={classes.title} style={{ color: "black", marginBottom: "0", marginTop: "15px", marginLeft: "10px"}} variant="h5"> {formValues[field.name]}</Typography>
-                <br />
+                <div style={{ display: "flex", textAlign: "center" }}>
+                  <Typography className={classes.containerTitle} style={{ fontSize: "24px" }} variant="h5">
+                    {field.label}:
+                  </Typography>
+                  <Typography className={classes.title} style={{ color: "black", marginBottom: "0", marginTop: "15px", marginLeft: "10px" }} variant="h5"> {formValues[field.name]}</Typography>
+                  <br />
                 </div>
               ))
             )
           }
           return (
             <div>
-              <br />
               <br />
               <Grid item className={classes.containerTitle}>
                 <Typography variant="h5">{sectionConfig.pdfTitle}</Typography>
@@ -169,7 +168,7 @@ const Pdf = () => {
                 {sectionConfig.fields.map((field, index) => (
                   <div
                     style={{ width: field.pdfWidth }}
-                    className={[classes.content, classes.pointLine, classes[field.pdfClass], classes[`${ shoulShowBorderLine(sectionConfig.fields.length, index) && "noRightLine"}`]].join(" ")}
+                    className={[classes.content, classes.pointLine, classes[field.pdfClass], classes[`${shoulShowBorderLine(sectionConfig.fields.length, index) && "noRightLine"}`]].join(" ")}
                   >
                     <Typography className={classes.title} variant="subtitle2">
                       {field.label}:
