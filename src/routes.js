@@ -5,7 +5,6 @@ import Login from './pages/Login';
 import NotFound from './pages/Page404';
 import Register from './pages/Register';
 import DashboardApp from './pages/DashboardApp';
-import { RxListPage } from './pages/RxList/RxListPage';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
 export default function Router() {
@@ -19,10 +18,9 @@ export default function Router() {
     },
     {
       path: '/dashboard',
-      element: <ProtectedRoute> <DashboardLayout /> </ProtectedRoute>,
+      element: <DashboardLayout />,
       children: [
-        { path: 'app', element:  <ProtectedRoute> <DashboardApp /></ProtectedRoute> },
-        { path: 'rxlist', element: <RxListPage /> },
+        { path: 'app', element:  <ProtectedRoute><DashboardApp /></ProtectedRoute> },
       ],
     },
     {
@@ -30,9 +28,8 @@ export default function Router() {
       element: <LogoOnlyLayout />,
       children: [
         { path: '/', element: <Navigate to="/auth/login" /> },
-        { path: 'dashboard', element: <ProtectedRoute> <DashboardApp /> </ProtectedRoute>   },
+        { path: 'dashboard', element:  <DashboardApp />   },
         { path: 'register', element: <Register /> },
-        { path: 'rx', element: <RxListPage /> },
         { path: '404', element: <NotFound /> },
         { path: '*', element: <Navigate to="/404" /> },
       ],
