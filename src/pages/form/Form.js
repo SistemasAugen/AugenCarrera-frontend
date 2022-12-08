@@ -32,7 +32,7 @@ const Form = () => {
       setGet(result.data);
 
     }
-    obtenerUsers();
+    // obtenerUsers();
   }, [])
 
   const [showPdf, setShowPdf] = useState(false);
