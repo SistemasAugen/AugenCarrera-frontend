@@ -1,26 +1,16 @@
 import { useRef, useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton } from '@mui/material';
+import { AuthService } from '../../services/auth-service';
 // components
 import MenuPopover from '../../components/MenuPopover';
 // mocks_
 import account from '../../_mock/account';
 
-// ----------------------------------------------------------------------
-
-const MENU_OPTIONS = [
-  {
-    label: 'Home',
-    icon: 'eva:home-fill',
-    linkTo: '/',
-  }
-];
-
-// ----------------------------------------------------------------------
-
 export default function AccountPopover() {
+  const navigate = useNavigate();
   const anchorRef = useRef(null);
 
   const [open, setOpen] = useState(null);
@@ -29,7 +19,16 @@ export default function AccountPopover() {
     setOpen(event.currentTarget);
   };
 
+  const getEmailData = () => {
+    return AuthService.getTokenData('email');
+  };
+
   const handleClose = () => {
+    AuthService.logout();
+    navigate('/', { replace: true });
+  };
+ 
+  const closePopover = ()=> {
     setOpen(null);
   };
 
@@ -59,7 +58,7 @@ export default function AccountPopover() {
       <MenuPopover
         open={Boolean(open)}
         anchorEl={open}
-        onClose={handleClose}
+        onClose={closePopover}
         sx={{
           p: 0,
           mt: 1.5,
@@ -75,19 +74,12 @@ export default function AccountPopover() {
             {account.displayName}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {account.email}
+            {getEmailData()}
           </Typography>
         </Box>
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
-        <Stack sx={{ p: 1 }}>
-          {MENU_OPTIONS.map((option) => (
-            <MenuItem key={option.label} to={option.linkTo} component={RouterLink} onClick={handleClose}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </Stack>
         <Divider sx={{ borderStyle: 'dashed' }} />
         <MenuItem onClick={handleClose} sx={{ m: 1 }}>
           Logout
