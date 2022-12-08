@@ -7,6 +7,7 @@ import { Link, Stack, Checkbox, TextField, IconButton, InputAdornment, FormContr
 import { LoadingButton } from '@mui/lab';
 // component
 import Iconify from '../../../components/Iconify';
+import { AuthService } from "../../../services/auth-service";
 
 // ----------------------------------------------------------------------
 
@@ -27,8 +28,17 @@ export default function LoginForm() {
       remember: true,
     },
     validationSchema: LoginSchema,
-    onSubmit: () => {
-      navigate('/dashboard/app', { replace: true });
+    onSubmit: (values, actions) => {
+      delete values.remember;
+      AuthService.login(values)
+      .then(result => {
+        actions.setSubmitting(false);
+        AuthService.setUserAuth(result.data);
+        navigate('/dashboard/app', { replace: true });
+      }).catch(err =>{
+        actions.setSubmitting(false);
+        console.error("ERROR",err);
+      })
     },
   });
 
@@ -89,11 +99,6 @@ export default function LoginForm() {
         </Stack>
 
         <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ my: 2 }}>
-          <FormControlLabel
-            control={<Checkbox {...getFieldProps('remember')} checked={values.remember} />}
-            label="Recordar contraseña"
-          />
-
           <Link component={RouterLink} variant="subtitle2" to="#" underline="hover">
             Olvidaste la contraseña?
           </Link>
