@@ -13,16 +13,6 @@ const navConfig = [
     path: '/dashboard/app',
     icon: getIcon('eva:pie-chart-2-fill'),
   },
-  {
-    title: 'Lista de RXs',
-    path: '/dashboard/rxlist',
-    icon: getIcon('eva:list-fill'),
-  },
-  {
-    title: 'Pagina no encontrada',
-    path: '/404',
-    icon: getIcon('eva:alert-triangle-fill'),
-  },
 ];
 
 export default navConfig;

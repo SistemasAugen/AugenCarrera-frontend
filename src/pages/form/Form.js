@@ -26,9 +26,6 @@ const Form = () => {
     const obtenerUsers = async () => {
       const url = 'http://localhost:3000/users/2505?select=user.id,user.name,branch.name,laboratory.name,facturation.rfc';
       const result = await axios.get(url);
-
-      console.log('data', result.data);
-
       setGet(result.data);
 
     }
