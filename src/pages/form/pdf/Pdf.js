@@ -6,7 +6,7 @@ import pdfMake from "pdfmake/build/pdfmake";
 import { Button, Box, Grid, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { SendPdf } from '../../../services/pdf.service';
 import useStyles from './Pdf.styles.ts';
 
 import logoAugen from "../../../imgs/logoAugen.png";
@@ -83,7 +83,13 @@ const Pdf = () => {
           }
         ]
       };
-      pdfMake.createPdf(pdfExportSettings).download("RX.pdf");
+      const pdf = pdfMake.createPdf(pdfExportSettings);
+      pdf.download("RX.pdf");
+      pdf.getBlob(file => {
+        const form = new FormData();
+        form.append('file', file);
+        SendPdf(form);
+      })
     })
   };
 
@@ -190,7 +196,7 @@ const Pdf = () => {
             variant="contained"
             onClick={printToPdf}
           >
-            Imprimir
+            Confirmar y generar PDF
           </Button>
         </div>
       </ThemeProvider>
